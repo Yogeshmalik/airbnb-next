@@ -10,7 +10,7 @@ function Banner() {
         src="https://links.papareact.com/0fm"
         alt="Banner Image"
         fill
-        objectFit= "cover"
+        objectFit="cover"
         priority
       />
       <div className="absolute top-1/2 w-full text-center">
