@@ -7,7 +7,7 @@ import MediumCard from "../../components/MediumCard";
 import LargeCard from "../../components/LargeCard";
 import Footer from "../../components/Footer";
 
-const Home = ({ exploreData, cardData }) => {
+const Home = () => {
   /* exploreData prop is destructuring and will fetch us info that is 
   rendered on the server */
   return (
@@ -31,14 +31,14 @@ Quickest thing to do is write out the json data by hand and then store it
 on a separate service, otherwise just store it locally and import. */}
             {/* {exploreData?.map(
             (item) => ( */}
-            {exploreData?.map((item) => (
+            {/* {exploreData?.map((item) => (
               <SmallCard
                 key={location}
                 img={img}
                 distance={distance}
                 location={location}
               />
-            ))}
+            ))} */}
           </div>
 
           <div
@@ -84,20 +84,20 @@ on a separate service, otherwise just store it locally and import. */}
   );
 };
 // static rendering; we need to include an async function
-export async function getStaticProps() {
-  const exploreData = await fetch("https://www.jsonkeeper.com/b/4G1G").then(
-    (res) => res.json()
-  );
-  const cardData = await fetch("https://www.jsonkeeper.com/b/VHHT").then(
-    (res) => res.json()
-  );
-  return {
-    props: {
-      exploreData, // its ES6 short for exploreData: exploreData
-      cardData,
-    },
-  };
-}
+// export async function getStaticProps() {
+//   const exploreData = await fetch("https://www.jsonkeeper.com/b/4G1G").then(
+//     (res) => res.json()
+//   );
+//   const cardData = await fetch("https://www.jsonkeeper.com/b/VHHT").then(
+//     (res) => res.json()
+//   );
+//   return {
+//     props: {
+//       exploreData, // its ES6 short for exploreData: exploreData
+//       cardData,
+//     },
+//   };
+// }
 /* it gives us json file from https://links.papareact.com/pyp
     when we pull the info, all the things comes with it. so we need to call 
     specific things */
