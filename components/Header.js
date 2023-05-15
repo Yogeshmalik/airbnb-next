@@ -1,10 +1,9 @@
 import Image from "next/image";
+
 import {
   SearchIcon,
-  MenuAlt1Icon,
   MenuIcon,
   UserCircleIcon,
-  UsersIcon,
   GlobeAltIcon,
 } from "@heroicons/react/solid";
 
