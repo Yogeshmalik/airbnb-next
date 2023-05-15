@@ -4,9 +4,12 @@ import SmallCard from "../../components/SmallCard";
 import exploreDataJson from "./exploreDataJson.json";
 import cardDataJson from "./cardDataJson.json";
 import MediumCard from "../../components/MediumCard";
+import LargeCard from "../../components/LargeCard";
+import Footer from "../../components/Footer";
 
 const Home = ({ exploreData, cardData }) => {
-  /* exploreData prop is destructuring and will fetch us info that is rendered on the server */
+  /* exploreData prop is destructuring and will fetch us info that is 
+  rendered on the server */
   return (
     <div>
       <Header />
@@ -54,15 +57,29 @@ on a separate service, otherwise just store it locally and import. */}
             ))}
           </div>
         </section>
+
         <section>
           <h2 className="text-4xl font-semibold py-8">Live Anywhere</h2>
-          <div className="relative">
+          <div
+            className=" space-x-2 flex overflow-scroll overflow-y-hidden 
+          scrollbar-hide p-3 -m-3"
+          >
             {cardDataJson?.map(({ img, title }) => (
               <MediumCard key={title} img={img} title={title} />
             ))}
           </div>
         </section>
+
+        <section>
+          <LargeCard
+            img="https://links.papareact.com/4cj"
+            title="The Greatest Outdoors"
+            description="Wishlists curated by Airbnb"
+            buttonText="Get Inspired"
+          />
+        </section>
       </main>
+      <Footer />
     </div>
   );
 };
@@ -82,7 +99,8 @@ export async function getStaticProps() {
   };
 }
 /* it gives us json file from https://links.papareact.com/pyp
-    when we pull the info, all the things comes with it. so we need to call specific things */
+    when we pull the info, all the things comes with it. so we need to call 
+    specific things */
 /** it will just give us json containing all the info we need.
      we need to return this function in the functional component above cz
      its happening on the server before it reaches the browser to show the stuff */

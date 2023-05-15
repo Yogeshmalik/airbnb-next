@@ -2,13 +2,14 @@ import Image from "next/image";
 
 function MediumCard({ img, title }) {
   return (
-    <div>
-      <div>
-        <Image src={img} height={100} width={100} alt="img" />
+    <div
+      className="hover:cursor-pointer hover:scale-105 
+    transform transition duration-300 ease-out"
+    >
+      <div className="relative h-80 w-80">
+        <Image className="rounded-xl " fill src={img} alt="img" />
       </div>
-      <div>
-        <h1>{title}</h1>
-      </div>
+      <h3 className="text-2xl mt-3">{title}</h3>
     </div>
   );
 }
