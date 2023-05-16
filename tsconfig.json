@@ -23,6 +23,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/page.js", "src/app/layout.tsx", "components/SmallCard.js", "components/MediumCard.js", "components/Banner.js", "components/Header.js"],
+  "include": ["next-env.d.js", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/page.js", "src/app/layout.js", "components/SmallCard.js", "components/MediumCard.js", "components/Banner.js", "components/Header.js"],
   "exclude": ["node_modules"]
 }
