@@ -2,7 +2,7 @@ function Footer() {
   return (
     <footer>
       <div
-        className="grid grid-cols-2 md:grid-cols-4 px-32 
+        className="grid grid-cols-2 md:grid-cols-4 px-20 
       md:px-32 sm:pl-32 lg:px-32 py-14 bg-gray-100 
       text-gray-600 gap-y-10"
       >
