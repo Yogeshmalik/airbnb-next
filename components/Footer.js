@@ -2,11 +2,11 @@ function Footer() {
   return (
     <footer>
       <div
-        className="grid grid-cols-2 md:grid-cols-4 pl-32 
-      md:px-32 sm:pl-32 lg:pl-32 py-14 bg-gray-100 
+        className="grid grid-cols-2 md:grid-cols-4 px-32 
+      md:px-32 sm:pl-32 lg:px-32 py-14 bg-gray-100 
       text-gray-600 gap-y-10"
       >
-        <div className="space-y-4 text-xs text-left text-gray-800">
+        <div className="space-y-4 pr-2 text-xs text-left text-gray-800">
           <h5 className="font-bold">ABOUT</h5>
           <p>How Airbnb works</p>
           <p>Newsroom</p>
@@ -14,7 +14,7 @@ function Footer() {
           <p>Airbnb Plus</p>
           <p>Airbnb Luxe</p>
         </div>
-        <div className="space-y-4 text-xs text-gray-800">
+        <div className="space-y-4 pl-2 text-xs text-gray-800">
           <h5 className="font-bold">COMMUNITY</h5>
           <p>Accessiblity</p>
           <p>This is not a real site</p>
@@ -22,7 +22,7 @@ function Footer() {
           <p>Airbnb Clone</p>
           <p>Map is included</p>
         </div>
-        <div className="space-y-4 text-xs text-gray-800">
+        <div className="space-y-4 pr-2 text-xs text-gray-800">
           <h5 className="font-bold">HOST</h5>
           <p>Yogesh SM</p>
           <p>Presents</p>
@@ -30,7 +30,7 @@ function Footer() {
           <p>Inside Every Hole</p>
           <p>On top of Topper</p>
         </div>
-        <div className="space-y-4 text-xs text-gray-800">
+        <div className="space-y-4 pl-2 text-xs text-gray-800">
           <h5 className="font-bold">Support</h5>
           <p>Help Centre</p>
           <p>Trust & Safety</p>
@@ -39,10 +39,17 @@ function Footer() {
           <p>403 into HW</p>
         </div>
       </div>
-      <div className="items-center text-center m-2 ">
-        <h1 className=" font-semibold hover:scale-90 hover:red ">
+      <div className="items-center bg-gray-200 text-center p-5">
+        <h1 className="inline-block font-semibold ">
           MADE BY
-          <a href="https://yogeshmalikportfolio.netlify.app/"> YSM</a>
+          <a
+            className="inline-block pl-2 ease-out font-bold hover:scale-150 
+            hover:text-[#fD5B61] transition duration-150 "
+            href="https://yogeshmalikportfolio.netlify.app/"
+          >
+            {" "}
+            YSM
+          </a>
         </h1>
       </div>
     </footer>
