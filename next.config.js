@@ -2,11 +2,10 @@
 const nextConfig = {
   images: {
     domains: [
+      "a0.muscache.com",
       "links.papareact.com",
-      "https://links.papareact.com",
-      "https://www.jsonkeeper.com",
-      "https://a0.muscache.com/",
-      "https://www.jsonserve.com/",
+      "www.jsonkeeper.com",
+      "www.jsonserve.com",
     ],
   },
 };
