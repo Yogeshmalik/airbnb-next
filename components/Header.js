@@ -106,8 +106,13 @@ function Header() {
             />
           </div>
           <div className="flex">
-            <button className="flex-grow">Cancel</button>
-            <button className="flex-grow">Search</button>
+            <button
+              onClick={() => setSearchInput("")}
+              className="flex-grow text-gray-500"
+            >
+              Cancel
+            </button>
+            <button className="flex-grow text-red-400">Search</button>
           </div>
         </div>
       )}

@@ -27,16 +27,16 @@ function Footer() {
           <p>Yogesh SM</p>
           <p>Presents</p>
           <p>Maj. Black Mamba</p>
-          <p>Inside Every Hole</p>
+          <p>In every opening</p>
           <p>On top of Topper</p>
         </div>
         <div className="space-y-4 pl-2 text-xs text-gray-800">
           <h5 className="font-bold">Support</h5>
           <p>Help Centre</p>
           <p>Trust & Safety</p>
-          <p>Hello YSM</p>
+          <p>Mamba Mentality</p>
           <p>Can not turn</p>
-          <p>403 into HW</p>
+          <p>304 into HW</p>
         </div>
       </div>
       <div className="items-center bg-gray-200 text-center p-5">
