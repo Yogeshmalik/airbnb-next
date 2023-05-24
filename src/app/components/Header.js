@@ -14,7 +14,7 @@ import { DateRangePicker } from "react-date-range";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-function Header() {
+function Header({ placeholder }) {
   const [searchInput, setSearchInput] = useState("");
   console.log("Search Input: ", searchInput);
 
@@ -32,10 +32,10 @@ function Header() {
     setEndDate(ranges.selection.endDate);
   };
 
-  const search = () => {
-    const queryParams = `?location=${searchInput}&startDate=${startDate.toISOString()}&endDate=${endDate.toISOString()}&noOfGuests=${noOfGuests}`;
-    const searchPath = `/search${queryParams}`;
-  };
+  // const search = () => {
+  //   const queryParams = `?location=${searchInput}&startDate=${startDate.toISOString()}&endDate=${endDate.toISOString()}&noOfGuests=${noOfGuests}`;
+  //   const searchPath = `/search${queryParams}`;
+  // };
   /* the function below is not working */
   // const search = () => {
   //   router.push({
@@ -88,7 +88,7 @@ function Header() {
           className="flex-grow pl-5 bg-transparent outline-none 
         text-sm text-gray-600 placeholder-gray-400"
           type="text"
-          placeholder="Start your search"
+          placeholder={placeholder || "Start your search"}
         />
         <SearchIcon
           className=" hidden md:inline-flex h-8 bg-red-400 
