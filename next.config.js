@@ -8,6 +8,7 @@ const nextConfig = {
       "www.jsonserve.com",
     ],
   },
+  experimental: { appDir: true },
 };
 
 module.exports = nextConfig;

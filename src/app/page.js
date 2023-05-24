@@ -1,16 +1,17 @@
 "use client";
-import Banner from "../../components/Banner";
-import Header from "../../components/Header";
-import SmallCard from "../../components/SmallCard";
+import Banner from "./components/Banner";
+import Header from "./components/Header";
+import SmallCard from "./components/SmallCard";
 import exploreDataJson from "./exploreDataJson.json";
 import cardDataJson from "./cardDataJson.json";
-import MediumCard from "../../components/MediumCard";
-import LargeCard from "../../components/LargeCard";
-import Footer from "../../components/Footer";
+import MediumCard from "./components/MediumCard";
+import LargeCard from "./components/LargeCard";
+import Footer from "./components/Footer";
 
 const Home = () => {
   /* exploreData prop is destructuring and will fetch us info that is 
   rendered on the server { exploreData, cardData } */
+
   return (
     <div>
       <Header />

@@ -6,12 +6,13 @@ import {
   MenuIcon,
   UserCircleIcon,
   GlobeAltIcon,
-  UserIcon,
   UsersIcon,
 } from "@heroicons/react/solid";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { DateRangePicker } from "react-date-range";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 function Header() {
   const [searchInput, setSearchInput] = useState("");
@@ -31,6 +32,28 @@ function Header() {
     setEndDate(ranges.selection.endDate);
   };
 
+  const search = () => {
+    const queryParams = `?location=${searchInput}&startDate=${startDate.toISOString()}&endDate=${endDate.toISOString()}&noOfGuests=${noOfGuests}`;
+    const searchPath = `/search${queryParams}`;
+  };
+  /* the function below is not working */
+  // const search = () => {
+  //   router.push({
+  //     pathname: "/search",
+  //     query: {
+  //       location: searchInput,
+  //       startDate: startDate.toISOString(),
+  //       endDate: endDate.toISOString(),
+  //       noOfGuests,
+  //     },
+  //   });
+  // };
+
+  // const router = useRouter();
+  // const goToHomePage = () => {
+  //   router.push("/");
+  // };
+
   return (
     <header
       className=" sticky top-0 z-50 grid grid-cols-3 
@@ -38,17 +61,20 @@ function Header() {
     >
       {/* left part */}
       <div
+        // onClick={goToHomePage}
         className=" relative flex items-center
        h-10 my-auto !important"
       >
-        <Image
-          className="cursor-pointer"
-          alt="bnb logo"
-          src="https://links.papareact.com/qd3"
-          width={100}
-          height={100}
-          priority
-        />
+        <Link href="/">
+          <Image
+            className="cursor-pointer"
+            alt="bnb logo"
+            src="https://links.papareact.com/qd3"
+            width={100}
+            height={100}
+            priority
+          />
+        </Link>
       </div>
 
       {/* middle part */}
@@ -112,7 +138,20 @@ function Header() {
             >
               Cancel
             </button>
-            <button className="flex-grow text-red-400">Search</button>
+
+            <Link
+              href={{
+                pathname: "/search",
+                query: {
+                  location: searchInput,
+                  startDate: startDate.toISOString(),
+                  endDate: endDate.toISOString(),
+                  noOfGuests,
+                },
+              }}
+            >
+              <button className="flex-grow text-red-400">Search</button>
+            </Link>
           </div>
         </div>
       )}
