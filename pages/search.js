@@ -8,8 +8,6 @@ import InfoCard from "../src/app/components/InfoCard";
 function Search({ searchResults }) {
   const router = useRouter();
 
-  console.log("searchResults: ", searchResults);
-
   /* ES6 Destructuring Starts */
   const { location, startDate, endDate, noOfGuests } = router.query;
   /* ES6 Destructuring Ends */
@@ -65,7 +63,6 @@ function Search({ searchResults }) {
               )
             )}
           </div>
-          
         </section>
       </main>
       <Footer className="absolute bottom-0 " />
