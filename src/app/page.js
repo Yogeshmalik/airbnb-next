@@ -8,6 +8,7 @@ import MediumCard from "./components/MediumCard";
 import LargeCard from "./components/LargeCard";
 import Footer from "./components/Footer";
 
+
 const Home = () => {
   /* exploreData prop is destructuring and will fetch us info that is 
   rendered on the server { exploreData, cardData } */

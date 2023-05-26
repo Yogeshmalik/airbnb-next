@@ -1,20 +1,22 @@
-"use client";
+// "use client";
 
 import "./globals.css";
 import { Inter } from "next/font/google";
-import ProgressBar from "@badrap/bar-of-progress";
-import { Router } from "next/router";
+// import ProgressBar from "@badrap/bar-of-progress";
+// import Router from "next/router";
 
-const progress = new ProgressBar({
-  size: 4,
-  color: "#FE595E",
-  className: "z-50",
-  delay: 100,
-});
+// const progress = new ProgressBar({
+//   size: 4,
+//   color: "#FE595E",
+//   className: "z-50",
+//   delay: 100,
+// });
 
-Router.events.on("routeChangeStart", progress.start);
-Router.events.on("routeChangeComplete", progress.finish);
-Router.events.on("routeChangeError", progress.finish);
+// const progBar =  progress.start();
+
+// Router.events.on("routeChangeStart", progress.start());
+// Router.events.on("routeChangeComplete", progress.finish);
+// Router.events.on("routeChangeError", progress.error);
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +28,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {/* {progBar} */}
+        {children}
+      </body>
     </html>
   );
 }

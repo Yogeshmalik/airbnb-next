@@ -37,7 +37,7 @@ function Search({ searchResults }) {
           </h1>
 
           <div
-            className="hidden lg:inline-flex mb-5 space-x-3 
+            className="hidden lg:inline-flex mb-5 space-x-3
           text-gray-800 whitespace-nowrap"
           >
             <p className="button">Cancellation Flexibility</p>
