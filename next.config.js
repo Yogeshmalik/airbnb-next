@@ -9,6 +9,10 @@ const nextConfig = {
     ],
   },
   experimental: { appDir: true },
+  env: {
+    mapbox_key:
+      "pk.eyJ1IjoieW9nZXNoc20iLCJhIjoiY2xpNHZxeDcwMGp1dzNmcGMzY3d4Nng0ciJ9.jYrfd75eeqZRhPbK0N6BRQ",
+  },
 };
 
 module.exports = nextConfig;

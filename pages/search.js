@@ -4,6 +4,8 @@ import Footer from "../src/app/components/Footer";
 import { useRouter } from "next/router";
 import { isValid, format, parseISO } from "date-fns";
 import InfoCard from "../src/app/components/InfoCard";
+import MapC from "../src/app/components/Map";
+import MyMap from "../src/app/components/Map";
 
 function Search({ searchResults }) {
   const router = useRouter();
@@ -65,6 +67,11 @@ function Search({ searchResults }) {
           </div>
         </section>
       </main>
+
+      <section className=" lg:inline-flex xl:inline-flex">
+        <MyMap />
+      </section>
+
       <Footer className="absolute bottom-0 " />
     </div>
   );
